@@ -12,6 +12,7 @@ interface Destination {
   duration: string;
   rating: number;
   tags: string[];
+  hight: number;
 }
 
 const destinations: Destination[] = [
@@ -22,6 +23,7 @@ const destinations: Destination[] = [
     duration: "Full Day",
     rating: 4.9,
     tags: ["Nature", "Science", "Adventure"],
+    hight: 100,
   },
   {
     name: "Gelati Monastery",
@@ -30,6 +32,9 @@ const destinations: Destination[] = [
     duration: "Half Day",
     rating: 4.8,
     tags: ["History", "Culture", "UNESCO"],
+        hight: 12345,
+    
+  
   },
   {
     name: "Signagi",
@@ -38,6 +43,7 @@ const destinations: Destination[] = [
     duration: "Full Day",
     rating: 4.9,
     tags: ["Culture", "Wine Region", "Views"],
+      hight: 345678,
   },
   {
     name: "Motsameta",
@@ -46,6 +52,7 @@ const destinations: Destination[] = [
     duration: "Half Day",
     rating: 4.7,
     tags: ["Nature", "History", "Scenic"],
+      hight: 1,
   },
 ];
 
@@ -89,6 +96,11 @@ const Destinations = () => {
                 <div className="absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-full bg-golden text-golden-foreground text-sm font-semibold">
                   <Star className="w-3.5 h-3.5 fill-current" />
                   {destination.rating}
+                </div>
+                
+                   {/* Hight Badge */}
+                <div className="absolute top-3 left-3 flex items-center gap-1 px-2 py-1 rounded-full bg-white text-golden-foreground text-sm font-semibold">
+                  {destination.hight}m
                 </div>
 
                 {/* Duration Badge */}

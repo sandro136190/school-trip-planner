@@ -21,7 +21,7 @@ const Destinations = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`${BACKEND_URL}/trips`)
+    fetch(`${BACKEND_URL}/destinations`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch destinations");
         return res.json();
